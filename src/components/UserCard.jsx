@@ -1,4 +1,5 @@
 import React from 'react';
+import './users.css';
 
 function UserCard(props) {
     console.log("card props", props.users)
