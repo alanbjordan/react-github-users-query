@@ -1,5 +1,6 @@
 import React from 'react';
 import UserCard from './UserCard';
+import { Link } from 'react-router-dom';
 
 function UserCardList(props) {
     const userDetails = props.users;
@@ -9,7 +10,7 @@ function UserCardList(props) {
             <div>
                 <ul>
                     {userDetails.map(userAtIndex => 
-                        <div key={userAtIndex}>
+                        <div  className="userPicture" key={userAtIndex.login}>
                             <UserCard
                                 users={userAtIndex}
                             />
@@ -24,5 +25,4 @@ function UserCardList(props) {
         </>
     )
 }
-
 export default UserCardList;
